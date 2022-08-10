@@ -1,0 +1,6 @@
+.git/
+.cache
+run.bat
+update_requirements.py
+venv
+venv/
