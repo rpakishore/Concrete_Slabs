@@ -57,3 +57,14 @@ Associated Engineering,<br>
 version: 1.1
 </p>
 """)
+
+# ---- HIDE STREAMLIT STYLE ----
+
+hide_st_style = """
+                <style>
+                #MainMenu{visibility: hidden;}
+                footer{visibility: hidden;}
+                header{visibility: hidden;}
+                </style>
+                """
+st.markdown(hide_st_style,unsafe_allow_html = True)  
