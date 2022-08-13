@@ -1,4 +1,3 @@
-from re import S
 import streamlit as st
 from handcalcs.decorator import handcalc
 from math import sqrt
@@ -6,7 +5,6 @@ import pandas as pd
 from datetime import datetime
 import json
 import forallpeople
-import sympy as sp
 forallpeople.environment('structural', top_level=True)
 
 input = {

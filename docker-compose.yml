@@ -1,0 +1,13 @@
+---
+version: "2.1"
+services:
+  slabs:
+    image: slabs:minimal
+    container_name: slabs
+    #ports:
+    #  - 9000:8501
+    restart: unless-stopped
+networks:
+  default:
+    external:
+        name: cloudflare-tunnel
