@@ -126,6 +126,9 @@ Inorder to ensure that all the `pip` commands are found. ensure that every time 
     - [x] Checks shear requirements against concrete shear capacity
     - [x] Checks moment requirements against capacity
     - [x] Accounts for crack control parameter, per CSA A23.3,cl -10.6.1
+    - [x] Simply supported condition
+    - [ ] One end continuous condition
+    - [ ] Both end continuous condition
     - [ ] Deflection checks
     - [ ] Export/Import calculation parameters
 - [ ] Punching shear checks
