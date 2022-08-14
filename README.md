@@ -2,10 +2,10 @@
 <div align="center"> 
   <h1>Reinforced Concrete Slab Design</h1>
   <p>
-    Rebar development length calculator is a web application that calculates the necessary tension and compression development lengths required in accordance with CSA A23.3-19.
+    Web based utility for the design of reinforced concrete slabs spanning over beams or walls.
   </p>
 <h4>
-    <a href="assets\output.gif">View Demo</a>
+    <a href="assets\demo.gif">View Demo</a>
   <span> · </span>
     <a href="https://github.com/rpakishore/Concrete_Slabs/blob/main/README.md">Documentation</a>
   <span> · </span>
@@ -28,7 +28,7 @@
 - [3. Usage](#3-usage)
 - [4. Other Functions](#4-other-functions)
   - [4.1. update_requirements.py](#41-update_requirementspy)
-- [Docker and deploy docker image](#docker-and-deploy-docker-image)
+- [Docker](#docker)
 - [5. Roadmap](#5-roadmap)
 - [6. FAQ](#6-faq)
 - [7. License](#7-license)
@@ -41,7 +41,7 @@
 ### 1.1. Screenshots
 
 <div align="center"> 
-  <img src="assets\output.gif" alt="screenshot" />
+  <img src="assets\demo.gif" alt="screenshot" />
 </div>
 
 <!-- Features -->
@@ -57,7 +57,7 @@
 
 <!-- Prerequisites -->
 ### 2.1. Prerequisites
-Python 3.7 or above
+Python 3.10 or above
 
 ### 2.2. Dependencies
 Create the virutual environment and install dependencies
@@ -97,7 +97,7 @@ The way this script works is as follows:
 Inorder to ensure that all the `pip` commands are found. ensure that every time a non standard library is imported, add a line with the following in code
 > #pip import XXXX
 
-## Docker and deploy docker image
+## Docker 
 1. Build Docker image
   ```bash
   docker build -t slabs:latest .
