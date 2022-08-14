@@ -487,8 +487,8 @@ st.subheader("Results")
 left, right = st.columns(2)      
 right.write(check.html(), unsafe_allow_html=True)
 result = f"""<table align="center" border="1" cellpadding="1" cellspacing="1"><tbody>
-            <tr><td scope="col">Slab thickness</td><td scope="col">{calc_variables['t']} mm</td></tr>
-            <tr><td scope="col">Slab span</td><td scope="col">{calc_variables['span']} mm</td></tr>
+            <tr><td scope="col">Slab thickness</td><td scope="col">{calc_variables['t']}</td></tr>
+            <tr><td scope="col">Slab span</td><td scope="col">{calc_variables['span']}</td></tr>
             <tr><td scope="col">Longitudinal Reinforcing</td><td scope="col">{calc_variables['longitudinal']} @ {int(calc_variables['long_spacing'])}mm</td></tr>
             <tr><td scope="col">Transverse Reinforcing</td><td scope="col">{calc_variables['transverse']} @ {int(calc_variables['trans_spacing'])}mm</td></tr>
             </tbody></table>"""
