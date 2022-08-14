@@ -17,7 +17,9 @@ Although this calculator has been formally checked for technical correctness, it
     - [x] Checks moment requirements against capacity
     - [x] Accounts for crack control parameter, per CSA A23.3,cl -10.6.1
     - [ ] Deflection checks
+    - [ ] Export/Import calculation parameters
 - [ ] Punching shear checks
+    - [ ] Export/Import calculation parameters
 
 ### References
 | S. No. | Reference | Year|
