@@ -2,21 +2,27 @@
 # coding: utf-8
 
 import streamlit as st
-from handcalcs.decorator import handcalc
-from math import sqrt
-st.write("# Work in Progress")
+
 st.write("# Concrete Slab Checks")
 st.write("""
 ### Purpose
-- These calculations check solid slabs supported by beams or walls. The calculation will check one way spanning and cater for simply supported or continuous support conditions.
+- These calculations check solid slabs supported by beams or walls.
 
 ### Disclaimer
 Although this calculator has been formally checked for technical correctness, it is not a substitute for engineering judgement, and does not relieve users of their duty to conduct required checking and quality control procedures.
 
+### Features
+- [x] One-way slab design
+    - [x] Checks shear requirements against concrete shear capacity
+    - [x] Checks moment requirements against capacity
+    - [x] Accounts for crack control parameter, per CSA A23.3,cl -10.6.1
+    - [ ] Deflection checks
+- [ ] Punching shear checks
+
 ### References
 | S. No. | Reference | Year|
 |--------|-----------|-----|
-| 1. | CSA A23.3 | 2019|
+| 1. | CSA A23.3 | 2019 |
 
 ### Color reference
 | Color             | Legend                                                                |
@@ -27,8 +33,8 @@ Although this calculator has been formally checked for technical correctness, it
 | ![002080](https://via.placeholder.com/25/002080?text=+) #Blue | Author's notes  |
 
 ### Assumptions and Limitations
-* The calculations do not cater for the situation where outer compression steel is required in the slab.
-* Design for shear is not supported but check for concrete shear strength is included.
+* The effect of compression steel is ignored
+* Contribution of steel is ignored in the shear checks. 
 
 
 ### Instructions for use
@@ -40,13 +46,23 @@ Although this calculator has been formally checked for technical correctness, it
 
 ### Version Notes and releases
 
-|Version|v0.1|
+|Version|v1.0|
 |---|---|
-|Version Notes| Draft web-release|
-|Version Date| 2022 - August - 09|
+|Version Notes| web-release|
+|Version Date| 2022 - August - 13|
+
 
 ***
 """)
+
+st.markdown("#### Change Notes:")
+with st.expander("v1.0"):
+    st.markdown("""
+                * Added one-way slab design per CSA A23.3-19, Includes:
+                    * shear check against concrete strength
+                    * moment check against slab bot bar strength
+                    * crack control parameter check per CSA A23.3,cl -10.6.1""")
+
 st.components.v1.html("""
 <h3 style="font-family:courier;">Created by</h3>
 <p style="font-family:courier;">
@@ -54,7 +70,6 @@ Arun Kishore<br>
 Structural EIT,<br>
 Associated Engineering,<br>
 <a href="mailto:rpakishore@gmail.com">Mail</a> • <a href="https://www.linkedin.com/in/rpakishore/">LinkedIn</a><br>
-version: 1.1
 </p>
 """)
 

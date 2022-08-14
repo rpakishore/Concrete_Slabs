@@ -15,9 +15,8 @@ input = {
     't': 150,
     'clear': 50,
     'span': 3000,
-    'Mu':1000,
-    'Mu_n':1000,
-    'Vu':1000,
+    'Mu':80,
+    'Vu':50,
     'transverse': '10M',
     'longitudinal': '15M',
     'long_spacing': 200,
@@ -488,6 +487,8 @@ st.subheader("Results")
 left, right = st.columns(2)      
 right.write(check.html(), unsafe_allow_html=True)
 result = f"""<table align="center" border="1" cellpadding="1" cellspacing="1"><tbody>
+            <tr><td scope="col">Slab thickness</td><td scope="col">{calc_variables['t']} mm</td></tr>
+            <tr><td scope="col">Slab span</td><td scope="col">{calc_variables['span']} mm</td></tr>
             <tr><td scope="col">Longitudinal Reinforcing</td><td scope="col">{calc_variables['longitudinal']} @ {int(calc_variables['long_spacing'])}mm</td></tr>
             <tr><td scope="col">Transverse Reinforcing</td><td scope="col">{calc_variables['transverse']} @ {int(calc_variables['trans_spacing'])}mm</td></tr>
             </tbody></table>"""
