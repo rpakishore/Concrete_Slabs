@@ -1,9 +1,11 @@
 ---
 version: "2.1"
 services:
-  slabs:
-    image: slabs:minimal
-    container_name: slabs
+  devlength:
+    image: ${NAME}:latest
+    container_name: ${NAME}
+    env_file:
+      - ./EDIT.env
     #ports:
     #  - 9000:8501
     restart: unless-stopped

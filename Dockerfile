@@ -1,17 +1,19 @@
-FROM intelligentdesigns/streamlit-plus:minimal-latest
+FROM python:3.9-slim
 MAINTAINER Arun rpakishore@gmail.com
 
-#Set Working directory
+EXPOSE 8501
+
 WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    software-properties-common \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt ./requirements.txt
 
 RUN pip3 install -r requirements.txt
 
-#Expose Port 8501 for app to be run on
-EXPOSE 8501
-
 COPY . /app
 
-ENTRYPOINT ["streamlit", "run"]
-CMD ["About.py"]
+ENTRYPOINT ["streamlit", "run", "About.py", "--server.port=8501", "--server.address=0.0.0.0"]
