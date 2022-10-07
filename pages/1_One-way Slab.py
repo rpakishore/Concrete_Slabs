@@ -7,6 +7,32 @@ import json
 import forallpeople
 forallpeople.environment('structural', top_level=True)
 
+#Remove Extra Padding from all sides of the page and top/bottom of sidebar
+st.markdown("""
+            <style>
+                .css-12oz5g7 {
+                    padding-top: 0rem;
+                    padding-bottom: 0rem;
+                    padding-left: 0rem;
+                    padding-right: 0rem;
+                }
+                .css-uc76bn{
+                    padding-top: 2rem;
+                    padding-bottom: 2rem;
+                }
+            </style>""", unsafe_allow_html=True) 
+
+# ---- HIDE STREAMLIT STYLE ----
+
+hide_st_style = """
+                <style>
+                #MainMenu{visibility: hidden;}
+                footer{visibility: hidden;}
+                header{visibility: hidden;}
+                </style>
+                """
+st.markdown(hide_st_style,unsafe_allow_html = True) 
+
 input = {
     'span_type':'Simply supported',
     'exposure': 'Exterior',
@@ -496,15 +522,3 @@ left.write(result, unsafe_allow_html=True)
 # <!-----Calculations tab------>
 st.subheader("Calculation")
 calc_block.write_calcs()
-
-
-# ---- HIDE STREAMLIT STYLE ----
-
-hide_st_style = """
-                <style>
-                #MainMenu{visibility: hidden;}
-                footer{visibility: hidden;}
-                header{visibility: hidden;}
-                </style>
-                """
-st.markdown(hide_st_style,unsafe_allow_html = True)  
