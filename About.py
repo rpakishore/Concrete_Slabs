@@ -6,7 +6,7 @@ from util.custom_streamlit_configs import hide_streamlit_footer, remove_padding_
 st.set_page_config(
         page_title='Concrete Slab Design',
         page_icon='👨‍🔬',
-        initial_sidebar_state="collapsed", 
+        initial_sidebar_state="expanded", 
         layout="auto")
 
 hide_streamlit_footer()
