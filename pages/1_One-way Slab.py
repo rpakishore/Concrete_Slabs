@@ -3,19 +3,16 @@ from handcalcs.decorator import handcalc
 from math import sqrt
 import pandas as pd
 from datetime import datetime
-import json
 import forallpeople
 forallpeople.environment('structural', top_level=True)
-from util.custom_streamlit_configs import hide_streamlit_footer, remove_padding_from_sides
+from util.streamlit_configs import Page_layout
+from util.static_data import bar_df
 
 st.set_page_config(
         page_title='Oneway Slab Design',
         page_icon='👨‍🔬',
         initial_sidebar_state="collapsed", 
         layout="centered")
-
-hide_streamlit_footer()
-remove_padding_from_sides()
 
 input = {
     'span_type':'Simply supported',
@@ -33,12 +30,12 @@ input = {
     'trans_spacing': 200,
 }
 
-bar_df = pd.DataFrame({
-    'bars': ['10M', '15M', '20M', '25M', '30M', '35M', '45M', '55M'],
-    'size': [11.3, 16, 19.5, 25.2, 29.9, 35.7, 43.7, 56.4],
-    'area': [100, 200, 300, 500, 700, 1000, 1500, 2500],
-    'hook dia': [60, 90, 100, 150, 200, 250, 400, 550]
-    })
+app = Page_layout(title='RC One-way slab design',
+                   default_session_key_values=input,
+                   hide_streamlit_footer=True,
+                   custom_footer=None,
+                   remove_padding_from_sides=True)
+app.set_pagelayout()
 
 # <!-----Classes-------->
 class checks:

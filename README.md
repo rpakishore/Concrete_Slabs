@@ -140,7 +140,7 @@ Inorder to ensure that all the `pip` commands are found. ensure that every time 
   + Yes! Simply hide the sidebar and use `Ctrl + P` to print the document to PDF.
 <!-- License -->
 ## 7. License
-Distributed under the no License. See LICENSE.txt for more information.
+See LICENSE.txt for more information.
 
 <!-- Contact -->
 ## 8. Contact
