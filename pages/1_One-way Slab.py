@@ -30,9 +30,9 @@ input = {
     'trans_spacing': 200,
 }
 
-app = Page_layout(title='RC One-way slab design',
+app = Page_layout(title='',
                    default_session_key_values=input,
-                   hide_streamlit_footer=True,
+                   hide_streamlit_footer=False,
                    custom_footer=None,
                    remove_padding_from_sides=True)
 app.set_pagelayout()
