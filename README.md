@@ -16,6 +16,8 @@
 </div>
 <br />
 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/rpakishore/Concrete_Slabs) ![GitHub last commit](https://img.shields.io/github/last-commit/rpakishore/Concrete_Slabs)
+
 <!-- Table of Contents -->
 <h2>Table of Contents</h2>
 
