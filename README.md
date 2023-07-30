@@ -82,7 +82,7 @@ Use this space to tell a little more about your project and how it can be used. 
 python -m streamlit run About.py
 ```
 
-Alternatively, You can checkout the script hosted [here](https://slabs.rpakishore.co.in/).
+Alternatively, You can checkout the script hosted [here](https://slabs.struct.work/One-way_Slab).
 ## 4. Other Functions
 ### 4.1. update_requirements.py
 ```bash
