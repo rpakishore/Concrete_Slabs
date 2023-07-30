@@ -30,6 +30,8 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY . /app
 WORKDIR /app
 
+RUN mv /app/.streamlit ~/.streamlit
+
 EXPOSE 8501
 
 ENTRYPOINT ["streamlit", "run", "About.py", "--server.port=8501", "--server.address=0.0.0.0"]
