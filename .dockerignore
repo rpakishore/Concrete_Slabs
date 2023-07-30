@@ -4,3 +4,4 @@ run.bat
 update_requirements.py
 venv
 venv/
+*.ipynb
