@@ -1,15 +1,18 @@
 ---
-version: "2.1"
+version: "3.8"
 services:
   devlength:
-    image: ${NAME}:latest
-    container_name: ${NAME}
-    env_file:
-      - ./EDIT.env
+    image: slabs:latest
+    container_name: slabs
+    #env_file:
+    #  - ./EDIT.env
     #ports:
     #  - 9000:8501
     restart: unless-stopped
+    networks:
+      - cloudflare-tunnel
+
 networks:
-  default:
-    external:
-        name: cloudflare-tunnel
+  cloudflare-tunnel:
+    external: true
+    name: cloudflare-tunnel
