@@ -2,8 +2,10 @@
 # MUltistage build
 # First Image
 FROM python:3.10-slim AS compile-image
+
 WORKDIR /app
 
+ENV FLIT_ROOT_INSTALL=1
 ARG PIP_DISABLE_PIP_VERSION_CHECK=1
 ARG PIP_NO_CACHE_DIR=1
 
