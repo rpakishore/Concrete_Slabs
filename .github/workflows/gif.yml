@@ -10,7 +10,7 @@ jobs:
       - name: Website to file
         uses: PabloLec/website-to-gif@2.1.1
         with:
-          url: "https://docs.github.com/en/get-started"
+          url: "https://slabs.struct.work/One-way_Slab"
           save_path: "/docs/assets"
       - name: Commit file to GH repo
         run: |
