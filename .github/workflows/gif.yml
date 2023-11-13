@@ -11,7 +11,6 @@ jobs:
         uses: PabloLec/website-to-gif@2.1.1
         with:
           url: "https://slabs.struct.work/One-way_Slab"
-          save_path: "/docs/assets"
       - name: Commit file to GH repo
         run: |
           git config --global user.name "PabloLec/website-to-gif"
