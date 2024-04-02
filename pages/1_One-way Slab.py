@@ -1,8 +1,6 @@
 import streamlit as st
 from handcalcs.decorator import handcalc
 from math import sqrt
-import pandas as pd
-from datetime import datetime
 import forallpeople
 forallpeople.environment('structural', top_level=True)
 from util.streamlit_configs import Page_layout
@@ -55,18 +53,18 @@ class checks:
 
         if type(util) != str:
             if util > 1:
-                color = "#ff3333"
+                color = "#EFC3CA"
             else:
-                color = "#00FF00"
+                color = "#C8ECBA"
             util = round(util*100,1)
-            self.code += (f"""<tr><td>{title}</td><td style="text-align: center;"><span style="background-color:{color};">{util}%</span></td></tr>""")
+            self.code += (f"""<tr><td>{title}</td><td style="text-align: center;background-color:{color};"><span>{util}%</span></td></tr>""")
 
         else:
             if util.lower().strip().startswith('fail'):
-                color = "#ff3333"
+                color = "#EFC3CA"
             else:
-                color = "#00FF00"
-            self.code += (f"""<tr><td>{title}</td><td style="text-align: center;"><span style="background-color:{color};">{util}</span></td></tr>""")
+                color = "#C8ECBA"
+            self.code += (f"""<tr><td>{title}</td><td style="text-align: center;background-color:{color};"><span>{util}</span></td></tr>""")
         self.completed_code = None
 
     def html(self):
