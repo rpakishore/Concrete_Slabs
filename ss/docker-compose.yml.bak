@@ -2,12 +2,12 @@
 version: "3.8"
 services:
   devlength:
-    image: rpakishore/concrete_slab:latest
+    image: slabs:latest
     container_name: slabs
     #env_file:
     #  - ./EDIT.env
-    # ports:
-    #   - 9000:8501
+    #ports:
+    #  - 9000:8501
     restart: unless-stopped
     networks:
       - cloudflare-tunnel
